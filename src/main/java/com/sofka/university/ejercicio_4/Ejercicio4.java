@@ -5,7 +5,7 @@ import java.util.Scanner;
 public class Ejercicio4 {
 
     private float precio;
-    private final static int iva = 21;
+    private final static int Iva = 21;
 
     public Ejercicio4(float precio) {
         this.precio = precio;
@@ -30,7 +30,7 @@ public class Ejercicio4 {
     }
 
     public int Iva() {
-        return iva;
+        return Iva;
     }
 
     public static void main(String[] args) {

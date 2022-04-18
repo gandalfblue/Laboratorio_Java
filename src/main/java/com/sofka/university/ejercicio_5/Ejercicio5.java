@@ -7,7 +7,7 @@ public class Ejercicio5 {
 
     private static List<Integer> numerosPares() {
         List<Integer> listaPares = new ArrayList();
-        int contador = 1;
+        Integer contador = 1;
         while (contador <= 100) {
             if (contador % 2 == 0) {
                 listaPares.add(contador);
