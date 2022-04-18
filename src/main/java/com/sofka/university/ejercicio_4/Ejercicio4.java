@@ -1,7 +1,5 @@
 package com.sofka.university.ejercicio_4;
 
-import com.sofka.university.ejercicio_3.Ejercicio3;
-
 import java.util.Scanner;
 
 public class Ejercicio4 {
