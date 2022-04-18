@@ -7,21 +7,40 @@ import java.util.Scanner;
 public class Ejercicio4 {
 
     private float precio;
-    private final int iva = 21;
+    private final static int iva = 21;
 
-    public float obtenerPrecioProducto(float  precio, int iva) {
+    public Ejercicio4(float precio) {
+        this.precio = precio;
+    }
+
+    public void obtenerIva(float  precio, int iva) {
         float precioIva = precio * iva / 100;
-        return precioIva;
+        this.obtenerPrecioProductoTotal(this.precio, precioIva);
+    }
+
+    private static void  obtenerPrecioProductoTotal(float precio,  float  precioIva) {
+        float preciototal = precioIva + precio;
+        System.out.println("El precio total del producto es: " + preciototal);;
+    }
+
+    public float Precio() {
+        return precio;
+    }
+
+    public static Ejercicio4 modificarPrecio(float precio) {
+        return new Ejercicio4(precio);
+    }
+
+    public int Iva() {
+        return iva;
     }
 
     public static void main(String[] args) {
-        Ejercicio4 respuesta = new Ejercicio4();
         Scanner lecturaConsola = new Scanner(System.in);
 
         System.out.println("Ingrese el precio del producto");
-        respuesta.precio = lecturaConsola.nextFloat();
-        float precioIva = respuesta.obtenerPrecioProducto( respuesta.precio, respuesta.iva);
-        float precioTotal = respuesta.precio + precioIva;
-        System.out.println("El precio total del producto es: " +precioTotal);
+        float precio = lecturaConsola.nextFloat();
+        Ejercicio4 respuesta = new Ejercicio4(precio);
+        respuesta.obtenerIva( respuesta.Precio(), respuesta.Iva());
     }
 }

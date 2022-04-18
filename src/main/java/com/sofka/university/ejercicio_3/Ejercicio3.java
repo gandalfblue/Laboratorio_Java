@@ -6,9 +6,17 @@ public class Ejercicio3 {
 
     private double radio;
 
+    public Ejercicio3() {
+
+    }
+
     public double obtenerAreaCirculo(double radio){
         double result = Math.PI * Math.pow(radio, 2);
         return (result);
+    }
+
+    public double Radio() {
+        return radio;
     }
 
     public static void main(String[] args) {
@@ -17,7 +25,7 @@ public class Ejercicio3 {
 
     System.out.println("Ingrese el radio del circulo");
         respuesta.radio = lecturaConsola.nextDouble();
-        double resultado = respuesta.obtenerAreaCirculo(respuesta.radio);
+        double resultado = respuesta.obtenerAreaCirculo(respuesta.Radio());
         System.out.println("El area del circulo es: " +resultado);
     }
 }
