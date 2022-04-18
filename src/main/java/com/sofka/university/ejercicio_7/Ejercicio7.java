@@ -21,8 +21,9 @@ public class Ejercicio7 {
         int comparar = 1;
         do {
             int leer = Ejercicio7.leerConsola();
+
             comparar = leer;
-        }while(comparar < 0 );
+        }while (comparar < 0);
         System.out.println(comparar);
     }
 

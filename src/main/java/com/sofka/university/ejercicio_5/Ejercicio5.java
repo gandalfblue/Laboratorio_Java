@@ -9,7 +9,7 @@ public class Ejercicio5 {
         List<Integer> listaPares = new ArrayList();
         Integer contador = 1;
         while (contador <= 100) {
-            if (contador % 2 == 0) {
+            if (isaBoolean(contador)) {
                 listaPares.add(contador);
             }
             contador++;
@@ -17,16 +17,24 @@ public class Ejercicio5 {
         return listaPares;
     }
 
+    private static boolean isaBoolean(Integer contador) {
+        return contador % 2 == 0;
+    }
+
     private static List<Integer> numerosImpares() {
         List<Integer> listaImpares = new ArrayList();
         int contador = 1;
         while (contador <= 100) {
-            if (contador % 2 != 0) {
+            if (isaBoolean(contador)) {
                 listaImpares.add(contador);
             }
-            contador++;
-        }
+            contador++;        }
+        
         return listaImpares;
+    }
+
+    private static boolean isaBoolean(int contador) {
+        return contador % 2 != 0;
     }
 
     public void imprimirNumerosPares() {
@@ -38,10 +46,10 @@ public class Ejercicio5 {
         this.imprimirNumerosImpares();
     }
 
-    private static void imprimirNumerosImpares() {
+    private void imprimirNumerosImpares() {
         System.out.println("Numeros Impares");
         for (int i = 0; i < 50; i++) {
-            System.out.print(Ejercicio5.numerosImpares().get(i) + " ");
+            System.out.print(this.numerosImpares().get(i) + " ");
         }
     }
 
