@@ -1,5 +1,7 @@
 package com.sofka.university.ejercicio_7;
 
+import com.sofka.university.interfaces.LeerConsola;
+
 import java.util.Scanner;
 
 public class Ejercicio7 {
