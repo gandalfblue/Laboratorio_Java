@@ -15,17 +15,11 @@ public class Ejercicio10 {
         System.out.println(this.frase);
     }
 
-
     public static void main(String[] args) {
         Scanner leerConsola = new Scanner(System.in);
         System.out.println("Ingrese la frase");
         String frase = leerConsola.nextLine();
         Ejercicio10 respuesta = new Ejercicio10(frase);
         respuesta.quitarEspacios();
-
-
-
     }
-
-
 }

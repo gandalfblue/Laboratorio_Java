@@ -12,6 +12,8 @@ n
 n
 >src/main/java/com/sofka/university/ejercicio_8/Ejercicio8.java,9\b\9b3326ec110ce5281d286d039fb277e602b291f3
 n
->src/main/java/com/sofka/university/ejercicio_4/Ejercicio4.java,6\5\65ccbfdc8cc877b1fa25dc8762aef8dfaabf8576
+>src/main/java/com/sofka/university/ejercicio_7/Ejercicio7.java,d\9\d9243b91ed183fd3599a3d161ce314bb82076de6
 n
->src/main/java/com/sofka/university/ejercicio_5/Ejercicio5.java,8\8\8813a7f008213730ed51aab0b78f699d7c0e66d3
+>src/main/java/com/sofka/university/interfaces/LeerConsola.java,d\7\d70f4197050b708866f3461bfbb3a9d9e75d3905
+n
+>src/main/java/com/sofka/university/ejercicio_4/Ejercicio4.java,6\5\65ccbfdc8cc877b1fa25dc8762aef8dfaabf8576
