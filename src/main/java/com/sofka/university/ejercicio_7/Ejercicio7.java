@@ -1,16 +1,10 @@
 package com.sofka.university.ejercicio_7;
 
-import com.sofka.university.interfaces.LeerConsola;
-
 import java.util.Scanner;
 
 public class Ejercicio7 {
 
-        private int numero;
-
-    public Ejercicio7() {   }
-
-    private static int leerConsola(){
+    private static Integer leerConsola(){
         Scanner lecturaTeclado = new Scanner(System.in);
         System.out.println("Ingrese el numero");
         int leerNumero = lecturaTeclado.nextInt();
@@ -26,14 +20,4 @@ public class Ejercicio7 {
         }while (comparar < 0);
         System.out.println(comparar);
     }
-
-    public void modificarNumero(int numero) {
-        this.numero = numero;
-    }
-
-    public static void main(String[] args) {
-        Ejercicio7 respuesta = new Ejercicio7();
-        respuesta.ciclo();
-    }
-
 }

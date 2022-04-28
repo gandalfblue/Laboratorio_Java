@@ -1,34 +1,30 @@
 package com.sofka.university.ejercicio_13;
 
-import java.text.ParseException;
-import java.time.LocalDate;
 import java.time.LocalDateTime;
-import java.time.LocalTime;
-import java.time.format.DateTimeFormatter;
 
 public class Ejercicio13 {
 
-    public void formatearFecha() throws ParseException {
-        LocalDate fechaActual = LocalDate.now();
-        LocalTime horaActual = LocalTime.now();
-        String fechaActualString = String.valueOf(fechaActual);
-        String horaActualString = String.valueOf(horaActual);
-        DateTimeFormatter formateadorFecha = DateTimeFormatter.ofPattern("yyyy/MM/dd");
-        DateTimeFormatter formateadorHora = DateTimeFormatter.ofPattern("HH:mm:ss a");
-        LocalDate fechaLocalFormateada = LocalDate.parse(fechaActualString, formateadorFecha);
-        LocalTime horaLocalFormateada = LocalTime.parse(horaActualString, formateadorHora);
-        System.out.println("La fecha y hora es: " + formateadorFecha.format(fechaLocalFormateada) + formateadorHora.format(horaLocalFormateada));
+    public static void imprimirFechaActual() {
+        String fechaActual =  formatoFecha();
+        System.out.println("La fecha es " +fechaActual) ;
+        imprimirHoraActual();
 
     }
 
-    public static void main(String[] args)  {
-        Ejercicio13 respuesta = new Ejercicio13();
-        try {
-        respuesta.formatearFecha();
-        }catch (Exception e) {
-            e.printStackTrace();
-            e.getMessage();
-        }
+    private static  void imprimirHoraActual() {
+        String horaActual = formatoHora();
+        System.out.println("La hora es " + horaActual);
     }
 
+    private static String formatoFecha() {
+        String fecha = String.valueOf(LocalDateTime.now().getYear());
+        fecha += "/" + LocalDateTime.now().getMonthValue() + "/" + LocalDateTime.now().getDayOfMonth();
+        return fecha;
+    }
+
+    private static String formatoHora() {
+        String hora = String.valueOf(LocalDateTime.now().getHour());
+        hora += ":" + LocalDateTime.now().getMinute() + ":" + LocalDateTime.now().getSecond();
+        return hora;
+    }
 }

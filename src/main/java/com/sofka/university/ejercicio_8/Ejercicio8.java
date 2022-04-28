@@ -1,7 +1,5 @@
 package com.sofka.university.ejercicio_8;
 
-import java.util.Scanner;
-
 public class Ejercicio8 {
 
     private String dia;
@@ -28,12 +26,4 @@ public class Ejercicio8 {
     }
 
     public String Dia() {return dia;}
-
-    public static void main(String[] args) {
-        Scanner leerConsola = new Scanner(System.in);
-        System.out.println("Ingrese el dia");
-        String dia = leerConsola.nextLine().toUpperCase();
-        Ejercicio8 respuesta = new Ejercicio8(dia);
-        respuesta.verificarDiaSemana();
-    }
 }

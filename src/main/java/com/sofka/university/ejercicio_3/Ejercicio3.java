@@ -1,13 +1,11 @@
 package com.sofka.university.ejercicio_3;
 
-import java.util.Scanner;
-
 public class Ejercicio3 {
 
-    private double radio;
+    private Double radio;
 
-    public Ejercicio3() {
-
+    public Ejercicio3(Double radio) {
+        this.radio = radio;
     }
 
     public double obtenerAreaCirculo(double radio){
@@ -15,17 +13,7 @@ public class Ejercicio3 {
         return (result);
     }
 
-    public double Radio() {
+    public Double Radio() {
         return radio;
-    }
-
-    public static void main(String[] args) {
-    Ejercicio3 respuesta = new Ejercicio3();
-    Scanner lecturaConsola = new Scanner(System.in);
-
-    System.out.println("Ingrese el radio del circulo");
-        respuesta.radio = lecturaConsola.nextDouble();
-        double resultado = respuesta.obtenerAreaCirculo(respuesta.Radio());
-        System.out.println("El area del circulo es: " +resultado);
     }
 }

@@ -5,10 +5,12 @@ package com.sofka.university.ejercicio_1;
  */
 public class Ejercicio1 {
 
-    private int numero1 = 4;
-    private int numero2 = 4;
+    private Integer numero1;
+    private Integer numero2;
 
-    public Ejercicio1() {
+    public Ejercicio1(Integer numero1, Integer numero2) {
+        this.numero1 = numero1;
+        this.numero2 = numero2;
     }
 
     public void numeroMayor(int numero1, int numero2) {
@@ -27,16 +29,11 @@ public class Ejercicio1 {
         System.out.println("El numero 2 es mayor que el numero 1");
     }
 
-    public int Numero1() {
+    public Integer Numero1() {
         return numero1;
     }
 
-    public int Numero2() {
+    public Integer Numero2() {
         return numero2;
-    }
-
-    public static void main(String[] args) {
-        Ejercicio1 respuesta = new Ejercicio1();
-        respuesta.numeroMayor(respuesta.Numero1(), respuesta.Numero2());
     }
 }

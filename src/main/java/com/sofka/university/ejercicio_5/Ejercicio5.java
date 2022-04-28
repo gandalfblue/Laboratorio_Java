@@ -33,10 +33,6 @@ public class Ejercicio5 {
         return listaImpares;
     }
 
-    private static boolean isaBoolean(int contador) {
-        return contador % 2 != 0;
-    }
-
     public void imprimirNumerosPares() {
         System.out.println("Numeros Pares");
         for (int i = 0; i < 50; i++) {
@@ -53,8 +49,5 @@ public class Ejercicio5 {
         }
     }
 
-    public static void main(String[] args) {
-        Ejercicio5 respuesta = new Ejercicio5();
-        respuesta.imprimirNumerosPares();
-    }
+
 }
