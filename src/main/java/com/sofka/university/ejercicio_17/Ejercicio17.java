@@ -25,7 +25,6 @@ public class Ejercicio17 {
 
 
         for (Electrodomestico elemento : electrodomesticos) {
-            System.out.println("\n" + elemento + " = " + elemento.precioFinal());
             if (elemento instanceof Electrodomestico) precioElectrodomesticos += elemento.precioFinal();
             if (elemento instanceof Lavadora) precioLavadoras += elemento.precioFinal();
             if (elemento instanceof Television) precioTelevisores += elemento.precioFinal();

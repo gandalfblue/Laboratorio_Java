@@ -6,19 +6,21 @@ public class Main {
     public static void main(String[] args) {
         Persona[] persona = new Persona[3];
         Scanner leerConsola = new Scanner(System.in);
-        int contador = 1;
+        int contador = 0;
         do {
-            System.out.println("Por favor ingrese el nombre de la persona: " + (contador));
+            System.out.println("Por favor ingrese el nombre de la persona: " + (contador + 1));
             String nombre = leerConsola.nextLine();
             System.out.println("Por favor ingrese la edad de " + nombre + ":");
             int edad = Integer.parseInt(leerConsola.nextLine());
             System.out.println("Por favor ingrese el sexo (H para hombre/ M para mujer) de " + nombre + ":");
             char sexo = leerConsola.nextLine().toUpperCase().charAt(0);
             double pesoTomado = tomarDatoPeso(leerConsola, contador, nombre);
+            System.out.println("pesoTomado = " + pesoTomado);
             double alturaTomada = tomarDatoAltura(leerConsola, contador, nombre);
             persona[contador] = new Persona(nombre, edad, pesoTomado, alturaTomada, sexo);
             contador++;
-        } while (contador > 3);
+        } while (contador < 3);
+
 
         // Mensaje sobre el peso
         System.out.println("Señor " + persona[0].Nombre()+","+persona[0].calcularIMC());
@@ -37,7 +39,7 @@ public class Main {
     }
 
     private static Double tomarDatoPeso(Scanner leerConsola, int contador, String nombre) {
-        if (contador > 1) {
+        if (contador == 0) {
             System.out.println("Por favor ingrese el peso en kg de " + nombre + ":");
             double peso = Double.parseDouble(leerConsola.nextLine());
             return peso;
@@ -46,8 +48,8 @@ public class Main {
     }
 
     private static Double tomarDatoAltura(Scanner leerConsola, int contador, String nombre) {
-        if (contador > 1) {
-            System.out.println("Por favor ingrese el peso en kg de " + nombre + ":");
+        if (contador == 0) {
+            System.out.println("Por favor ingrese la altura en metros de " + nombre + ":");
             double altura = Double.parseDouble(leerConsola.nextLine());
             return altura;
         }

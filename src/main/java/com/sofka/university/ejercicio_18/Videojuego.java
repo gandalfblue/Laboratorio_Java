@@ -51,13 +51,12 @@ public class Videojuego implements Entregable {
 
     @Override
     public String toString() {
-        return "Videojuego{" +
-                "title='" + this.titulo + '\'' +
+        return "Videojuego:" +
+                "titulo='" + this.titulo + '\'' +
                 ", horas_estimadas=" + this.horasEstimadas +
                 ", entregado=" + this.entregado +
                 ", genero='" + this.genero + '\'' +
-                ", companhia='" + this.compania + '\'' +
-                '}';
+                ", compania='" + this.compania + '\'';
     }
 
     public String getTitulo() {

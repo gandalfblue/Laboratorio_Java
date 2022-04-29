@@ -32,13 +32,13 @@ public class Serie implements Entregable{
 
     @Override
     public String toString() {
-        return "Serie{" +
+        return "Serie:" +
                 "titulo='" + this.titulo + '\'' +
                 ", numeroTemporadas=" + this.numeroTemporadas +
                 ", entregado=" + this.entregado +
                 ", genero='" + this.genero + '\'' +
-                ", creador='" + this.creador + '\'' +
-                '}';
+                ", creador='" + this.creador + '\''
+                ;
     }
 
     @Override

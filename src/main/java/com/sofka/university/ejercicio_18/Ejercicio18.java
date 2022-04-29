@@ -1,11 +1,13 @@
 package com.sofka.university.ejercicio_18;
 
 import java.util.Random;
+import java.util.logging.Logger;
 
 public class Ejercicio18 {
 
     public static void main(String[] args) {
 
+        Logger logger = Logger.getLogger("main");
         Serie[] series = new Serie[5];
         Videojuego[] videojuegos = new Videojuego[5];
 
@@ -31,6 +33,7 @@ public class Ejercicio18 {
             videojuegos[i].entregar();
         }
 
+        logger.info("prueba de logger");
         System.out.println("Las series entregados fueron: " + contarSeriesEntregadas(series));
         System.out.println("Los juegos entregados fueron: " + contarJuegosEntregados(videojuegos));
 

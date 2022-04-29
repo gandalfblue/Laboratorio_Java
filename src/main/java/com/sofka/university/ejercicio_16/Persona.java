@@ -7,18 +7,32 @@ public class Persona {
     private final Integer BAJOPESO = -1;
     private final Integer PESONORMAL = 0;
     private final Integer SOBREPESO = 1;
-    private static final char[] LETRASDNI = {'T', 'R', 'W', 'A', 'G', 'M', 'Y', 'F', 'P', 'D', 'X',
+    private final char[] LETRASDNI = {'T', 'R', 'W', 'A', 'G', 'M', 'Y', 'F', 'P', 'D', 'X',
             'B', 'N', 'J', 'Z', 'S', 'Q', 'V', 'H', 'L', 'C', 'K', 'E'};
 
+    private final Double PESO_DEFAULT = 0D;
+
+    private final Integer EDAD_DEFAULT = 0;
+
+    private final Double ALTURA_DEFAULT = 0D;
+
+    private final String NOMBRE_DEFAULT = "";
+
     private final Character SEXODEFAULT = 'H';
-    private String nombre = "";
-    private Integer edad = 0;
-    private Integer dni = 0;
-    private Double peso = 0.0;
-    private Double altura = 0.0;
-    private Character sex = this.SEXODEFAULT;
+    private String nombre;
+    private Integer edad;
+    private Integer dni;
+    private Double peso;
+    private Double altura;
+    private Character sex;
 
     public Persona() {
+        this.nombre = this.NOMBRE_DEFAULT;
+        this.edad = this.EDAD_DEFAULT;
+        this.peso = this.PESO_DEFAULT;
+        this.altura = this.ALTURA_DEFAULT;
+        this.sex = this.SEXODEFAULT;
+        this.dni = this.generarNumeroDNI();
     }
 
     public Persona(String nombre, Integer edad, Double peso, Double altura, Character sex, Integer dni) {
@@ -46,7 +60,14 @@ public class Persona {
     }
 
     public String calcularIMC() {
+        System.out.println("this.peso = " + this.peso);
         double peso = this.peso / (Math.pow(this.altura, 2));
+        System.out.println("peso = " + peso);
+        if (peso == 0) {
+            String mensaje = " desconocemos su peso";
+            return mensaje;
+
+        }
         int pesoActual = isBajoPeso(peso);
         String mensajePeso = mensajeBajoPeso(pesoActual);
         return mensajePeso;
@@ -92,6 +113,7 @@ public class Persona {
             else this.sex = sexo;
         }
 
+        @Override
         public String toString () {
             String mensaje = "Nombre: " + this.nombre + "\n"
                                         + "Edad: " + this.edad + "\n"

@@ -6,6 +6,8 @@ public class Lavadora extends Electrodomestico {
     private Integer carga = this.CARGA_DEFAULT;
 
     public Lavadora() {
+        super();
+        this.carga = this.CARGA_DEFAULT;
     }
 
     public Lavadora(Integer carga) {
@@ -22,10 +24,9 @@ public class Lavadora extends Electrodomestico {
         this.carga = carga;
     }
 
-    @Override
-    public int precioFinal() {
-        int precioFinal = precioFinal();
-        precioFinal += precioPorConsumo();
+    public int precioFinalLavadera(){
+        int precioFinal = this.precioFinal();
+        precioFinal += this.carga >30 ? 50 : 0;
         return precioFinal;
     }
 

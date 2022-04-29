@@ -6,18 +6,24 @@ import java.util.Map;
 public class Electrodomestico {
 
     private final Character[] LETRAS_CONSUMO_ENERGETICO = {'A', 'B', 'C', 'D', 'E', 'F'};
+
+    private final Character CONSUMO_ENERGETICO_DEFAULT = 'F';
     private final String[] COLORES_LAVADORA_DISPONIBLES = {"blanco", "negro", "rojo", "azul", "gris"};
+
+    private final String COLORE_LAVADORA_DEFAULT = "blanco";
     private final Integer PRECIOBASE = 100;
-    private final Double PESO = 5.0;
+    private final Double PESO_DEFAULT = 5.0;
     private Integer precioConsumo = this.PRECIOBASE;
     private String color = this.COLORES_LAVADORA_DISPONIBLES[0];
     private Character consumoenergetico = this.LETRAS_CONSUMO_ENERGETICO[5];
     private Double peso = 0.0;
 
     public Electrodomestico() {
+        this.precioConsumo = this.PRECIOBASE;
+        this.color = this.COLORE_LAVADORA_DEFAULT;
+        this.consumoenergetico = CONSUMO_ENERGETICO_DEFAULT;
+        this.peso = this.PESO_DEFAULT;
     }
-
-    ;
 
     public Electrodomestico(Integer precioConsumo, Double peso) {
         this.precioConsumo = precioConsumo;
@@ -53,7 +59,6 @@ public class Electrodomestico {
         int precioFinal = precioConsumo + precioPorTamano;
         return precioFinal;
     }
-
 
     public Integer precioPorConsumo() {
         Map<Character, Integer> precioConsumo = new HashMap<>();

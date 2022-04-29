@@ -8,6 +8,9 @@ public class Television extends Electrodomestico{
     private Boolean sintonizadorTDT = this.SINTONIZADOR_DEAFAULT;
 
     public Television() {
+        super();
+        this.resolucion = this.RESOLUCION_DEFAULT;
+        this.sintonizadorTDT = this.SINTONIZADOR_DEAFAULT;
     }
 
     public Television(Integer precioConsumo, Double peso) {
